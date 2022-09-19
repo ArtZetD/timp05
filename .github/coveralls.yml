@@ -1,1 +1,21 @@
-repo_token: PJ18mBjI416w7dyF0RId9itEgm2lEsxNz
+---
+
+(2) - name: "Install Docker CE"
+
+(3)  package:
+
+(4)    name: "{{ docker_ce_packages }}"
+
+(5)    state: present
+
+(6)
+
+(7) - name: "Enable and start "docker" systemd service"
+
+(8)  service:
+
+(9)    name: docker
+
+(10)    enabled: yes
+
+(11)    state: started
